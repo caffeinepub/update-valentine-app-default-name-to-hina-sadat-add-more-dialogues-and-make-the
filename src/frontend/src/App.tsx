@@ -14,7 +14,7 @@ import Confetti from '@/components/Confetti';
 import FloatingHearts from '@/components/FloatingHearts';
 
 function App() {
-  const [name, setName] = useState('Hina Sadat');
+  const [name, setName] = useState('Ghazal');
   const [showConfetti, setShowConfetti] = useState(false);
   const [showFloatingHearts, setShowFloatingHearts] = useState(false);
   const [showSuccessDialog, setShowSuccessDialog] = useState(false);

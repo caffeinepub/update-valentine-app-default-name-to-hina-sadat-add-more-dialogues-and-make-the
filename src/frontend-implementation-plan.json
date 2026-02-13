@@ -1,69 +1,22 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Valentine app tweaks: default name, more No-dialogues, click-only moving No button, and mobile fit",
+  "title": "Restore default displayed name to Ghazal",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Default the displayed/editable name to \"Hina Sadat\" on first load and remove any remaining \"Ghazal\" defaulting.",
+      "summary": "Revert the initial default name shown in the header and prefilled in the editable input to “Ghazal” while preserving live updates as the user types.",
       "acceptanceCriteria": [
-        "On first load, the large title name shows \"Hina Sadat\".",
-        "On first load, the name input value is \"Hina Sadat\".",
-        "No other part of the UI still defaults to \"Ghazal\"."
+        "On a fresh page load, the main name header displays \"Ghazal\" by default.",
+        "On a fresh page load, the name input field value is \"Ghazal\" by default.",
+        "The user can still edit the name and the header updates live as they type.",
+        "No other app text, behaviors, or styling change as part of this update."
       ],
       "file_operations": [
         {
           "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Update the initial name state/defaults from \"Ghazal\" to \"Hina Sadat\" so both the header and the shadcn-ui Input are prefilled correctly on first render. Use the shadcn-ui Input component as-is (do not edit read-only ui components). Verify the component's usage instructions before implementing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Expand the in-code rotating \"No\" button dialogue list and keep cycling through it on every tap/click.",
-      "acceptanceCriteria": [
-        "The in-code list of \"No\" messages is noticeably larger than the current list.",
-        "Each time the user taps/clicks \"No\", the button label updates to the next dialogue (cycling through the full set)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Significantly expand the noMessages array and ensure the \"No\" button label continues to advance on every activation, wrapping around to the start after the final message. Keep rendering through the existing shadcn-ui Button component (do not edit read-only ui components). Verify the component's usage instructions before implementing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Make the \"No\" button move only on an intentional click/tap (not hover/proximity) and avoid double-triggering on mobile.",
-      "acceptanceCriteria": [
-        "Hovering the \"No\" button with a mouse does not move it.",
-        "Touching near the \"No\" button without activating it does not move it.",
-        "Clicking/tapping the \"No\" button moves it to a new position and updates the dialogue label.",
-        "On mobile devices, a single tap triggers a single move (no double-trigger from both touch and click)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Remove hover/proximity handlers (onMouseEnter/onTouchStart) from the \"No\" button and switch to a single pointer-based activation handler so only an intentional tap/click triggers movement + message rotation, without duplicate firing on mobile. Keep the UI built with shadcn-ui Button (do not edit read-only ui components). Verify the component's usage instructions before implementing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "summary": "Improve small-screen layout to prevent horizontal overflow and keep buttons fully tappable, while constraining \"No\" movement within the visible container on phones.",
-      "acceptanceCriteria": [
-        "On a narrow viewport (~360px wide), content does not overflow horizontally.",
-        "Yes/No buttons remain fully visible and tappable without requiring zoom.",
-        "The \"No\" button movement stays within the visible button container area on small screens."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Adjust the buttons layout responsively (e.g., stack or reduce sizing on small viewports) while preserving the current style, and ensure the buttons container prevents horizontal overflow. Update the \"No\" movement bounds calculation to use real container/button measurements (via refs) and clamp random positions so the button stays fully within the container on phone-sized screens. Continue using shadcn-ui Card/Button for structure and styling (do not edit read-only ui components). Verify the component's usage instructions before implementing."
+          "description": "Change the initial React state for `name` from \"Hina Sadat\" back to the previous default \"Ghazal\" (the `useState(...)` initializer), ensuring the header and controlled input both prefill with \"Ghazal\" on first load and continue to update live as the user types. Do not modify any files under frontend/src/components/ui."
         }
       ]
     }
