@@ -1,2 +1,3 @@
-# update-valentine-app-default-name-to-hina-sadat-add-more-dialogues-and-make-the
-Exported from Caffeine project: Update Valentine app: default name to Hina Sadat, add more dialogues, and make the 'No' button move only on tap/click
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

@@ -1,0 +1,17 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no backend logic.",
+  "feature_evidence.json": "Feature evidence report mapping feature IDs to affected frontend files and components.",
+  "frontend-file-summaries.txt": "Text file containing prewritten summaries for key frontend components and configurations.",
+  "frontend/index.css": "Tailwind base stylesheet defining color tokens, theme variables, and dark mode overrides.",
+  "frontend/index.html": "Basic HTML shell loading the React app via main.tsx.",
+  "frontend/src/App.tsx": "Main interactive UI with name input, yes/no logic, movable No button, animations, audio, and success dialog.",
+  "frontend/src/components/Confetti.tsx": "Generates and animates 100 falling confetti particles.",
+  "frontend/src/components/FloatingHearts.tsx": "Creates looping floating heart animations rising from the bottom.",
+  "frontend/src/hooks/useActor.ts": "React hook that initializes and updates a backend actor based on Internet Identity state.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Context provider and hooks for Internet Identity login, state, and identity persistence.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file noting that no backend queries are needed.",
+  "frontend/src/index.css": "Defines Tailwind layers and custom OKLCH color variables, including Valentine theme colors and dark mode variants, plus utility classes for themed backgrounds and text.",
+  "frontend/src/main.tsx": "Bootstraps the React app, wrapping it with React Query and the InternetIdentityProvider before rendering the App component.",
+  "frontend/tailwind.config.js": "Configures Tailwind with dark mode, content paths, extended OKLCH‑based color variables, fonts, keyframes, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Stores project metadata, including versioning, implemented features, pending feature requests, and a summary of the Valentine app state."
+}

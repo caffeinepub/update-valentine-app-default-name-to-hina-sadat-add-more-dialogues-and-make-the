@@ -1,0 +1,92 @@
+{
+  "kind": "build_request",
+  "title": "Update Valentine app: default name to Hina Sadat, add more dialogues, and make the 'No' button move only on tap/click",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Set the app’s default displayed name to \"Hina Sadat\" (instead of the current default \"Ghazal\") and ensure the editable name field is prefilled with \"Hina Sadat\" on first load.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ],
+        "quotes": [
+          "Make one with the name Hina Sadat."
+        ]
+      },
+      "acceptanceCriteria": [
+        "On first load, the large title name shows \"Hina Sadat\".",
+        "On first load, the name input value is \"Hina Sadat\".",
+        "No other part of the UI still defaults to \"Ghazal\"."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Expand the rotating \"No\"-button dialogue list to include many more messages (significantly more than the current list) and continue cycling messages as the user repeatedly taps/clicks \"No\".",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ],
+        "quotes": [
+          "Add many more dialogues"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The in-code list of \"No\" messages is noticeably larger than the current list.",
+        "Each time the user taps/clicks \"No\", the button label updates to the next dialogue (cycling through the full set)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Change the \"No\" button behavior so it moves to a new position only when the user clicks/taps it, and it must not move on hover or mere touch/hover proximity.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-2"
+        ],
+        "quotes": [
+          "when the no is clicked it should move around only when its clicked or tapped"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hovering the \"No\" button with a mouse does not move it.",
+        "Touching near the \"No\" button without activating it does not move it.",
+        "Clicking/tapping the \"No\" button moves it to a new position and updates the dialogue label.",
+        "On mobile devices, a single tap triggers a single move (no double-trigger from both touch and click)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Ensure the main interaction layout (name header, question, and Yes/No buttons) fits comfortably on phone-sized screens without horizontal overflow; adjust button sizing/stacking as needed for small viewports while preserving the existing visual style.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-1"
+        ],
+        "quotes": [
+          "should fit even on a phone"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On a narrow viewport (~360px wide), content does not overflow horizontally.",
+        "Yes/No buttons remain fully visible and tappable without requiring zoom.",
+        "The \"No\" button movement stays within the visible button container area on small screens."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui (read-only shadcn components).",
+    "Backend must remain single-actor; only add backend logic if strictly required (this change set should remain frontend-only)."
+  ],
+  "nonGoals": [
+    "Adding Internet Identity authentication flows (not requested).",
+    "Persisting dialogues or user state to the backend.",
+    "Adding new pages/routes or a multi-screen experience."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

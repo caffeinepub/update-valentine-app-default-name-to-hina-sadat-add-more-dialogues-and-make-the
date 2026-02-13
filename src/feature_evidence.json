@@ -1,0 +1,77 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-set-the-app-s-default-displayed-name-to-hina-sadat-instead-of-the-current-default-ghazal-and-ensure-the-editable-name-field-is-prefilled-with-hina-sadat-on-first-load",
+      "featureTitle": "Set the app’s default displayed name to \"Hina Sadat\" (instead of the current default \"Ghazal\") and ensure the editable name field is prefilled with \"Hina Sadat\" on first load.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-expand-the-rotating-no-button-dialogue-list-to-include-many-more-messages-significantly-more-than-the-current-list-and-continue-cycling-messages-as-the-user-repeatedly-taps-clicks-no",
+      "featureTitle": "Expand the rotating \"No\"-button dialogue list to include many more messages (significantly more than the current list) and continue cycling messages as the user repeatedly taps/clicks \"No\".",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-change-the-no-button-behavior-so-it-moves-to-a-new-position-only-when-the-user-clicks-taps-it-and-it-must-not-move-on-hover-or-mere-touch-hover-proximity",
+      "featureTitle": "Change the \"No\" button behavior so it moves to a new position only when the user clicks/taps it, and it must not move on hover or mere touch/hover proximity.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-the-main-interaction-layout-name-header-question-and-yes-no-buttons-fits-comfortably-on-phone-sized-screens-without-horizontal-overflow-adjust-button-sizing-stacking-as-needed-for-small-viewports-while-preserving-the-existing-visual-style",
+      "featureTitle": "Ensure the main interaction layout (name header, question, and Yes/No buttons) fits comfortably on phone-sized screens without horizontal overflow; adjust button sizing/stacking as needed for small viewports while preserving the existing visual style.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

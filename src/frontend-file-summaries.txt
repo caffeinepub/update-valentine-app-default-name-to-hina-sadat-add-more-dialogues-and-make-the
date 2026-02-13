@@ -1,0 +1,8 @@
+{
+  "frontend/src/App.tsx": "Main Valentine's Day interactive page with editable name input (default: \"Hina Sadat\"), Yes/No buttons where No moves only on click/tap (not hover), expanded dialogue messages (50+ variations), mobile-responsive layout with proper bounds checking, success dialog with confetti/hearts effects, and background music controls.",
+  "frontend/src/components/Confetti.tsx": "Animated confetti component that creates 100 colorful falling particles with random positions, speeds, and rotations for celebration effect.",
+  "frontend/src/components/FloatingHearts.tsx": "Floating hearts animation component that continuously generates heart icons rising from bottom to top with varying sizes and speeds.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as all functionality is client-side only with no backend integration needed.",
+  "frontend/src/index.css": "Complete styling with Valentine's Day OKLCH color palette (pinks and reds), custom animations (float, float-up), and Google Fonts integration (Pacifico, Dancing Script, Quicksand).",
+  "frontend/tailwind.config.js": "Extended Tailwind configuration with Valentine's Day color tokens, custom font families, and animation keyframes for floating hearts and confetti effects."
+}
